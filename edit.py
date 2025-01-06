@@ -19,6 +19,10 @@ def edit_data(local_data):
     if local_data[1] == "Sep": local_data[1] = "09"
     if local_data[1] == "Oct": local_data[1] = "10"
     if local_data[1] == "Nov": local_data[1] = "11"
+
+    if len(str(local_data[2])) == 1:
+        local_data[2] = "0" + local_data[2]
+        
     data = f"{local_data[2]}.{local_data[1]}.{local_data[4]}"
     local_data = [local_data[0], local_data[3], data]
     return local_data
